@@ -1,0 +1,15 @@
+body {
+    font-family: Arial;
+    color: rgb(13, 65, 113);
+}
+
+a {
+    color: red;
+    text-decoration: none;
+}
+
+h1 {
+    color: rgba(192, 42, 137, 0.431);
+}
+
+
