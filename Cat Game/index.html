@@ -3,13 +3,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
     <title>Adopt a Cat!</title>
 </head>
-<body>
-    <img src="images/intro.jpeg" alt="Pic of cat shopping">
-    <h1>Would you like a new pet cat?</h1>
 
-    <h2>Please fill up form below to adopt a cat</h2>
+<body>
+    <div id="header">
+        <h1 id="title">Adopt a Cat!
+            <img src="images/caticon.png" alt="Cat icon" id="caticon">
+        </h1>
+        
+    </div>
+
+    <div id="maincatphoto">
+        <img src="images/intro.jpeg" class="center" alt="Pic of two cats">
+    </div>
+
+    <h2>Would you like a new pet cat?</h2>
+
+    <h3>Please fill up form below to adopt a cat</h3>
     
     <section>
         <form action="">
@@ -26,7 +41,7 @@
                 <br>
                 <br>
                 <label for="submit"></label>
-                <input type="submit" name="submit">
+                <input type="submit" name="submit" class="submit">
         </form>
 
         <hr>
@@ -36,11 +51,9 @@
         You are at the adoption centre and there are 2 cats up for adoption. Which cat do you choose?
     </p>
 
-    <section>
-        <a href="whitecat.html"><img src="images/whitecat.jpeg" alt="Pic of white cat" width="200"></a>
-        <a href="tigercat.html"><img src="images/tigercat.jpeg" alt="Pic of tiger cat" width="200"></a>
-
-
+    <section class="catoptions">
+        <a href="whitecat.html"><img src="images/whitecat.jpeg" alt="Pic of white cat"></a>
+        <a href="tigercat.html"><img src="images/tigercat.jpeg" alt="Pic of tiger cat"></a>
     </section>
 
 </body>
