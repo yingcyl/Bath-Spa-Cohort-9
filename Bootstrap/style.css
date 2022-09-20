@@ -1,0 +1,17 @@
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: aliceblue;
+}
+
+.navbar-custom {
+    background-color: rgb(180, 229, 242);
+}
+
+
+#home {
+    margin-left: 20px;
+}
+
+img {
+    padding: 20px;
+}
