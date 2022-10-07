@@ -64,7 +64,7 @@ table {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 25%;
+    width: 23%;
     height: 40%;
     background-color:  hsl(213, 19%, 18%);
     border-radius: 5%;
@@ -95,16 +95,19 @@ table {
 }
 
 
-
 h1 {
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 3;
 }
 
-.rating-state p {
+.grey-font {
     color: hsl(216, 12%, 54%);
     line-height: 1.5;
+}
+
+#center-font {
+    text-align: center;
 }
 
 #number-container {
