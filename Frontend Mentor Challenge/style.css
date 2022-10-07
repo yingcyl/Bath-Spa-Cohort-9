@@ -65,7 +65,7 @@ table {
     flex-direction: column;
     justify-content: center;
     width: 23%;
-    height: 40%;
+    height: 50%;
     background-color:  hsl(213, 19%, 18%);
     border-radius: 5%;
     padding: 20px 40px; 
@@ -172,7 +172,7 @@ h1 {
 }
 
 
-@media (max-width: 375px) {
+@media (max-width: 450px) {
     .container {
         width: 70%;
         height: 45%;
@@ -185,4 +185,15 @@ h1 {
 
   }
   
+  @media (min-width: 450px) and (max-width: 800px) {
+    .container {
+        width: 50%;
+        height: 45%;
+    }
 
+    #star-icon {
+        width: 7%;
+        height: 5%;
+    }
+
+  }
