@@ -1,0 +1,185 @@
+/* CSS reset to remove preset styles on elements */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+.body-style {
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(216, 12%, 8%);
+    font-size: 15px;
+    font-family: 'Overpass', sans-serif;
+    /* height of 100vh given to the body to center items in it. otherwise the only height is of the content of the body */
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25%;
+    height: 40%;
+    background-color:  hsl(213, 19%, 18%);
+    border-radius: 5%;
+    padding: 20px 40px; 
+}
+
+#center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#star-icon {
+    background-color: hsl(211, 20%, 23%);
+    width: 7%;
+    height: 6%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+
+#star-icon svg {
+    /* to center svg in container */
+    display: block;
+    margin: auto;
+}
+
+
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 3;
+}
+
+.rating-state p {
+    color: hsl(216, 12%, 54%);
+    line-height: 1.5;
+}
+
+#number-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.number-rating {
+    width: 5%;
+    background-color: hsl(211, 20%, 23%);
+    text-align: center;
+    padding: 5%;
+    border-radius: 50%;
+    
+}
+
+.number-rating:hover {
+    cursor: pointer;
+}
+
+#submit-button {
+    border-radius: 15px;
+    color: white;
+    text-transform: uppercase;
+    line-height: 3;
+    letter-spacing: 1.5px;
+    background-color: hsl(25, 97%, 53%);
+    border: 0;
+    font-weight: 700;
+}
+
+#submit-button:hover {
+    cursor: pointer;
+}
+
+.display-none {
+    display: none;
+}
+
+
+/* to change color of button to a lighter grey when clicked. both input and label elements need to be selected for the button to change color */
+#number-container input[type="radio"]:checked+label {
+    background-color:  hsl(216, 12%, 54%);
+}
+
+
+#result {
+    color:hsl(25, 97%, 53%);
+    font-weight: 700;
+    background-color: hsl(211, 20%, 23%);
+    line-height: 2.5;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+
+}
+
+
+@media (max-width: 375px) {
+    .container {
+        width: 70%;
+        height: 45%;
+    }
+
+    #star-icon {
+        width: 7%;
+        height: 5%;
+    }
+
+  }
+  
+
