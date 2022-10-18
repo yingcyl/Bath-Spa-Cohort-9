@@ -1,0 +1,41 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: repeat(5, 20vw);
+    grid-gap: 1rem;
+}
+
+/* to resize images so that it will fit in the grid  */
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#mountain {
+    grid-column: 1 / 4; 
+    grid-row: 1 / 4;
+}
+
+#cake {
+    grid-column: 4 / 6;
+    grid-row: 1 / 6;
+}
+
+#dog {
+    grid-column: 1 / 3;
+    grid-row: 4 / 6;
+}
+
+#chicken {
+    grid-row: 4 / 6 ;
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
