@@ -19,8 +19,89 @@
 
 <body>
 
+  <main class="main-container d-flex">
+    <section class="bg-image">
+      <div class="row card-image card-image-front">
 
-  <div class="container-fluid">
+        <img src="images/bg-card-front.png" alt="">
+
+        <div id="card-front-text">
+
+          <img src="images/card-logo.svg" alt="" id="card-logo">
+
+          <div id="card-number">
+            0000 0000 0000 0000
+          </div>
+
+          <div id="card-name">
+            <span>Jane Appleseed</span>
+            <span id="expiry-date">00/00</span>
+            
+          </div>
+        
+        </div>
+        
+
+      </div>
+      <div class="row card-image card-image-back">
+        <img src="images/bg-card-back.png" alt="">
+        <div id="card-back-text">000</div>
+      </div>
+
+    </section>
+
+    <section class="d-flex flex-column justify-content-center">
+
+      <form action="" class="d-flex flex-column justify-content-evenly" id="form">
+
+        <div>
+          <label for="form-name" class="mb-2">CARDHOLDER NAME</label>
+          <br>
+          <input type="text" class="form-control" name="form-name" id="form-name" placeholder="e.g. Jane Appleseed" required>
+          <div class="valid-feedback"></div>
+        </div>
+        
+        <div>
+          <label for="form-cardnumber" class="mb-2">CARD NUMBER</label>
+          <br>
+          <input type="text" class="form-control" name="form-cardnumber" id="form-cardnumber" placeholder="e.g. 1234 5678 9123 0000" required maxlength="16">
+        </div>
+        
+        <div class="d-flex justify-content-between">
+
+          <div>
+            <label for="form-expirydate" class="mb-2">EXP. DATE (MM/YY)</label>
+            <br>
+            <div class="d-flex justify-content-between">
+              <input type="text" class="form-control me-2" name="expirydate" id="form-expirydate" placeholder="MM" required maxlength="2">
+              <input type="text" class="form-control me-2" name="expirydate" id="form-expirydate" placeholder="YY" required maxlength="2"> 
+            </div>
+          </div>
+          
+          <div>
+            <label for="form-cvc" class="mb-2">CVC</label>
+            <br>
+            <input type="text" class="form-control" name="form-cvc" id="form-cvc" placeholder="e.g. 123" required maxlength="3">
+          </div>
+
+        </div>
+        
+
+        <button class="btn btn-dark" id="button">
+          Confirm
+        </button>
+        
+      </form>
+      
+    </section>
+  </div>
+
+
+
+
+  </main>
+
+  <!-- <div class="container-fluid">
     <div class="row">
       <div class="col d-flex flex-column justify-content-center card-container bg-image">
         <div class="row card-image card-image-front mb-5 me-5">
@@ -102,7 +183,7 @@
       
 
 
-  </div>
+  </div> -->
 
   
 

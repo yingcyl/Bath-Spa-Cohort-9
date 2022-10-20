@@ -53,15 +53,19 @@ body {
     font-family: 'Space Grotesk', sans-serif;
 }
 
+.main-container {
+    width: 1440px;
+}
+
 .bg-image {
     background-image: url('images/bg-main-desktop.png');
     background-repeat: no-repeat;
-    background-size: contain;
+    width: 900px;
+    height: 900px;
     position: relative;
 }
 
 .card-image {
-    
     width: 450px;
     height: auto;
 }
