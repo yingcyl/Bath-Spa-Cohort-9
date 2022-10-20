@@ -57,6 +57,7 @@ body {
     width: 450px;
     height: auto;
     position: relative;
+
 }
 
 .card-container {
@@ -101,4 +102,24 @@ body {
     margin-top: 100px;
     margin-left: 340px;
     letter-spacing: 1px;
+}
+
+#form {
+    height: 50%;
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: 2px;
+    font-size: 14px;
+    margin-left: 50px ;
+    margin-right: 100px;
+}
+
+
+#button {
+    height: 45px;
+}
+
+
+#form-expirydate {
+    margin: 0;
+    width: 80px;
 }
