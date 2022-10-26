@@ -1,25 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  
-  <title>Interactive card details form</title>
-  <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <!-- linking google fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">  
+    <title>Interactive card details form</title>
+    <link rel="stylesheet" href="style.css" />
 
-  <!-- linking bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- linking google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
 
-</head>
+    <!-- linking bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+  </head>
 
-<body>
+  <body>
+    <main class="container-fluid main-container g-0">
+      <section class="row row-container">
+        <div class="col g-0">
+          <div class="bg-image">
+            <!-- back and front card images placed in a div so they are grouped together and will move together when screen is resized -->
+            <!-- img div placed inside bg-image div so that it can be positioned based on bg-image - it will move with the bg image -->
+            <div class="cards d-flex flex-column">
+              <div>
+                <img src="images/bg-card-front.png" alt="" id="card-front" />
+                <div id="card-front-text">
+                  <img src="images/card-logo.svg" alt="" id="card-logo" />
 
-  <main class="main-container d-flex">
+                  <div id="card-number">0000 0000 0000 0000</div>
+
+                  <div id="card-name">
+                    <span>Jane Appleseed</span>
+                    <div id="expiry-date">
+                      <span id="ex-month">00</span>/<span id="ex-year">00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="card-back">
+                <img src="images/bg-card-back.png" alt="" />
+                <div id="card-back-text">000</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col g-0 d-flex flex-column justify-content-center">
+          <!-- <section class="d-flex flex-column justify-content-center"> -->
+          <form
+            action=""
+            class="d-flex flex-column justify-content-evenly"
+            id="form"
+          >
+            <div>
+              <label for="form-name" class="mb-2">CARDHOLDER NAME</label>
+              <br />
+              <input
+                type="text"
+                class="form-control"
+                name="form-name"
+                id="form-name"
+                placeholder="e.g. Jane Appleseed"
+                required
+              />
+            </div>
+
+            <div>
+              <label for="form-cardnumber" class="mb-2">CARD NUMBER</label>
+              <br />
+              <input
+                type="text"
+                class="form-control"
+                name="form-cardnumber"
+                id="form-cardnumber"
+                placeholder="e.g. 1234 5678 9123 0000"
+                required
+                maxlength="16"
+              />
+              <p id="cardnumber-error"></p>
+            </div>
+
+            <div class="d-flex justify-content-between">
+              <div>
+                <label for="expirydate" class="mb-2">EXP. DATE (MM/YY)</label>
+                <br />
+                <div class="d-flex justify-content-between">
+                  <div class="d-flex flex-column">
+                    <input
+                      type="text"
+                      class="form-control me-2 form-expirydate"
+                      name="expirydate"
+                      id="expiry-month"
+                      placeholder="MM"
+                      required
+                      maxlength="2"
+                      min="1"
+                      max="12"
+                    />
+                    <p id="month-error"></p>
+                  </div>
+
+                  <div class="d-flex flex-column">
+                    <input
+                      type="text"
+                      class="form-control me-2"
+                      name="expirydate"
+                      id="expiry-year"
+                      placeholder="YY"
+                      required
+                      maxlength="2"
+                    />
+                    <p id="year-error"></p>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <label for="form-cvc" class="mb-2">CVC</label>
+                <br />
+                <input
+                  type="text"
+                  class="form-control"
+                  name="form-cvc"
+                  id="form-cvc"
+                  placeholder="e.g. 123"
+                  required
+                  maxlength="3"
+                />
+                <p id="cvc-error"></p>
+              </div>
+            </div>
+
+            <button class="btn btn-dark" id="button">Confirm</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- <main class="main-container d-flex">
     <section class="bg-image">
       <div class="row card-image card-image-front">
 
@@ -58,23 +186,32 @@
           <label for="form-name" class="mb-2">CARDHOLDER NAME</label>
           <br>
           <input type="text" class="form-control" name="form-name" id="form-name" placeholder="e.g. Jane Appleseed" required>
-          <div class="valid-feedback"></div>
+          
         </div>
         
         <div>
           <label for="form-cardnumber" class="mb-2">CARD NUMBER</label>
           <br>
           <input type="text" class="form-control" name="form-cardnumber" id="form-cardnumber" placeholder="e.g. 1234 5678 9123 0000" required maxlength="16">
+          <p id="cardnumber-error"></p>
         </div>
         
         <div class="d-flex justify-content-between">
 
           <div>
-            <label for="form-expirydate" class="mb-2">EXP. DATE (MM/YY)</label>
+            <label for="expirydate" class="mb-2">EXP. DATE (MM/YY)</label>
             <br>
             <div class="d-flex justify-content-between">
-              <input type="text" class="form-control me-2" name="expirydate" id="form-expirydate" placeholder="MM" required maxlength="2">
-              <input type="text" class="form-control me-2" name="expirydate" id="form-expirydate" placeholder="YY" required maxlength="2"> 
+              <div class="d-flex flex-column">
+                <input type="text" class="form-control me-2 form-expirydate" name="expirydate" id="expiry-month" placeholder="MM" required maxlength="2" min="1" max="12">
+                <p id="month-error"></p>
+              </div>
+
+              <div class="d-flex flex-column">
+                <input type="text" class="form-control me-2" name="expirydate" id="expiry-year" placeholder="YY" required maxlength="2"> 
+                <p id="year-error"></p>
+              </div>
+
             </div>
           </div>
           
@@ -82,6 +219,7 @@
             <label for="form-cvc" class="mb-2">CVC</label>
             <br>
             <input type="text" class="form-control" name="form-cvc" id="form-cvc" placeholder="e.g. 123" required maxlength="3">
+            <p id="error"></p>
           </div>
 
         </div>
@@ -99,9 +237,9 @@
 
 
 
-  </main>
+  </main> -->
 
-  <!-- <div class="container-fluid">
+    <!-- <div class="container-fluid">
     <div class="row">
       <div class="col d-flex flex-column justify-content-center card-container bg-image">
         <div class="row card-image card-image-front mb-5 me-5">
@@ -185,19 +323,20 @@
 
   </div> -->
 
-  
+    <!-- Completed state start -->
 
-  <!-- Completed state start -->
-
-  <!-- Thank you!
+    <!-- Thank you!
   We've added your card details
   Continue
    -->
-  <!-- linking javascript file  -->
-  <script src="app.js"></script>  
+    <!-- linking javascript file  -->
+    <script src="app.js"></script>
 
-  <!-- JavaScript Bundle with Popper for bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-
-</body>
+    <!-- JavaScript Bundle with Popper for bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

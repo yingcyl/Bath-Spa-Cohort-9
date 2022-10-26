@@ -1,53 +1,232 @@
 /* CSS stylesheet reset */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
+.main-container {
+  height: 100vh;
+  width: 100vh;
+}
 
+.row-container {
+  height: 100%;
+  width: 100%;
+}
 
+.bg-image {
+  background-image: url("images/bg-main-desktop.png");
+  height: 100%;
+  width: 70%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* postion relative so that its child elements can be positioned relative to it */
+  position: relative;
+}
 
-body {
+.cards {
+  position: absolute;
+  top: 50%;
+  gap: 2rem;
+  left: 100%;
+  transform: translate(-50%, -50%);
+}
+
+#card-front {
+  transform: translateX(-100px);
+  position: relative;
+}
+
+#card-front-text {
+  position: absolute;
+  color: white;
+  transform: translate(-80px, -230px);
+}
+
+#card-logo {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+#card-number {
+  font-size: 30px;
+  font-weight: 500;
+  margin-left: 20px;
+  margin-top: 50px;
+}
+
+#card-name {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+#expiry-date {
+  transform: translate(300px, -24px);
+}
+
+#card-back {
+  position: relative;
+}
+
+#card-back-text {
+  color: white;
+  position: absolute;
+  font-size: 18px;
+  letter-spacing: 1px;
+  transform: translate(350px, -140px);
+}
+
+#form {
+  height: 50%;
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: 2px;
+  font-size: 14px;
+  margin-left: 50px;
+  margin-right: 100px;
+}
+
+#button {
+  height: 45px;
+}
+
+.form-expirydate {
+  margin: 0;
+  width: 80px;
+}
+
+#month-error {
+  margin: 0;
+}
+
+#year-error {
+  margin: 0;
+}
+
+/* body {
     height: 100vh;
     width: 100vw;
     font-family: 'Space Grotesk', sans-serif;
@@ -141,7 +320,16 @@ body {
 }
 
 
-#form-expirydate {
+.form-expirydate {
     margin: 0;
     width: 80px;
 }
+
+
+#month-error {
+    margin: 0;
+}
+
+#year-error {
+    margin: 0;
+} */
