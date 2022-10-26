@@ -13,6 +13,10 @@ const exYear = document.querySelector("#ex-year");
 const cvc = document.querySelector("#card-back-text");
 const formcvc = document.querySelector("#form-cvc");
 const cvcError = document.querySelector("#cvc-error");
+const confirm = document.querySelector("#confirm");
+const mainContainer = document.querySelector(".main-container");
+const thankyouState = document.querySelector(".thankyou-state");
+const form = document.querySelector("#form");
 
 // interactive card display for card name
 
@@ -86,4 +90,10 @@ formcvc.addEventListener("input", function () {
     cvcError.textContent = "";
   }
   cvc.textContent = cvcInput;
+});
+
+// when the submit button is clicked, the display-none class will be toggled between the main and thank you page
+confirm.addEventListener("click", function () {
+  form.classList.toggle("d-none");
+  thankyouState.classList.toggle("d-none");
 });

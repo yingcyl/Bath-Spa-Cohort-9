@@ -141,19 +141,22 @@
               </div>
             </div>
 
-            <button class="btn btn-dark" id="button">Confirm</button>
+            <button class="btn btn-dark button" id="confirm">Confirm</button>
           </form>
+
+          <section
+            class="thankyou-state d-flex flex-column align-items-center d-none"
+          >
+            <img src="images/icon-complete.svg" alt="" />
+            <div id="thanks">Thank you!</div>
+            <div id="message">We've added your card details</div>
+            <button class="btn btn-dark button">Continue</button>
+          </section>
         </div>
       </section>
     </main>
 
     <!-- Completed state start -->
-    <section class="thankyou-state d-flex flex-column align-items-center">
-      <img src="images/icon-complete.svg" alt="" />
-      <div id="thanks">Thank you!</div>
-      <div id="message">We've added your card details</div>
-      <button class="btn btn-dark" id="button">Continue</button>
-    </section>
 
     <!-- linking javascript file  -->
     <script src="app.js"></script>
