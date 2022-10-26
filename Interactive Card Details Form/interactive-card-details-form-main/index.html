@@ -26,14 +26,14 @@
   </head>
 
   <body>
-    <main class="container-fluid main-container g-0">
+    <main class="container-fluid main-container g-0" id="main-mobile">
       <section class="row row-container">
-        <div class="col g-0">
+        <div class="col-lg-6 g-0">
           <div class="bg-image">
             <!-- back and front card images placed in a div so they are grouped together and will move together when screen is resized -->
             <!-- img div placed inside bg-image div so that it can be positioned based on bg-image - it will move with the bg image -->
             <div class="cards d-flex flex-column">
-              <div>
+              <div id="c-front">
                 <img src="images/bg-card-front.png" alt="" id="card-front" />
                 <div id="card-front-text">
                   <img src="images/card-logo.svg" alt="" id="card-logo" />
@@ -55,7 +55,7 @@
             </div>
           </div>
         </div>
-        <div class="col g-0 d-flex flex-column justify-content-center">
+        <div class="col-lg-6 g-0 d-flex flex-column justify-content-center">
           <!-- <section class="d-flex flex-column justify-content-center"> -->
           <form
             action=""
