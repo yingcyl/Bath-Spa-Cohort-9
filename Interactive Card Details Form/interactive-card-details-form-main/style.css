@@ -147,6 +147,7 @@ table {
 }
 
 .cards {
+  /* position absolute only works when position relative set to parent  */
   position: absolute;
   top: 50%;
   gap: 2rem;
@@ -253,9 +254,6 @@ table {
   .bg-image {
     background-image: url("images/bg-main-mobile.png");
     width: 100%;
-    /* background-repeat: no-repeat;
-    background-size: cover; */
-    /* position: relative; */
   }
 
   #c-front img {
@@ -266,9 +264,8 @@ table {
     max-width: 30%;
   }
   .cards {
-    /* transform: translate(-120%, 25%); */
     top: 70%;
-    left: 60%;
+    left: 65%;
     gap: 0;
   }
 
@@ -286,6 +283,8 @@ table {
     font-size: 10px;
     transform: translate(150px, -100%);
   }
+
+  /* position relative set for c-front and position absolute for card text so that both would move together when screen resizes */
 
   #c-front {
     position: relative;
@@ -311,55 +310,9 @@ table {
     position: absolute;
     transform: translate(700%, -420%);
   }
-
-  /* #card-front {
-    width: 100%;
-    position: relative;
-  }
-
-  #c-front {
-    transform: translateY(90%);
-    z-index: 1;
-  }
-  #card-back {
-    transform: translateY(-70%);
-  }
-
-  #card-back img {
-    width: 100%;
-    position: relative;
-  }
-  #expiry-date {
-    display: inline;
-    margin-left: 180px;
-  }
-
-  #card-front-text {
-    width: 100%;
-    transform: translate(-20%, -100%);
-    position: absolute;
-  }
-  #card-number {
-    font-size: 17px;
-    
-    width: 100%;
-  }
-
-  #card-name {
-    font-size: 16px;
-    font-weight: 500;
-    text-transform: uppercase;
-    margin-left: 20px;
-    margin-top: 20px;
-    p
-  }
-
-  #expiry-date {
-    transform: translate(300px, -24px);
-   
-} */
 }
 
+/* media query to fix margin for cvc input box on small screens */
 @media (max-width: 375px) {
   #form-cvc {
     margin-top: 20px;
